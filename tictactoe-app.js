@@ -16,16 +16,14 @@ jQuery(document).ready(function ($) {
 
 	$(".block").click(function(){
 		$("#start_msg").hide();
-		if (player) {
-			$("#player").html("O's");
-		}
-		else $("#player").html("X's");
 		if (free(this.id)){
 			if (player){
+				$("#player").html("O's");
 				blocks[this.id] = 1;
 				draw(this.id, player);
 				}
 			else {
+				$("#player").html("X's");
 				blocks[this.id] = 2;
 				draw(this.id, player);
 				}
